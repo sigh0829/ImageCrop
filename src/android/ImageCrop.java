@@ -48,20 +48,20 @@ public class Image extends CordovaPlugin {
     }
   }
 
-	public void crop(String filePath){
-  	Intent cropIntent = new Intent(this, CropImage.class);
-  	cropIntent.putExtra(CropImage.IMAGE_PATH, filePath);
-  	cropIntent.putExtra(CropImage.SCALE, true);
-  	cropIntent.putExtra(CropImage.ASPECT_X, 1);
-  	cropIntent.putExtra(CropImage.ASPECT_Y, 1);
-  	cropIntent.putExtra(CropImage.OUTPUT_X, 300);
-  	cropIntent.putExtra(CropImage.OUTPUT_Y, 300);
-  	cropIntent.putExtra(CropImage.RETURN_DATA, true);
-  	if (this.cordova != null) {
+  public void crop(String filePath){
+    Intent cropIntent = new Intent(this, CropImage.class);
+    cropIntent.putExtra(CropImage.IMAGE_PATH, filePath);
+    cropIntent.putExtra(CropImage.SCALE, true);
+    cropIntent.putExtra(CropImage.ASPECT_X, 1);
+    cropIntent.putExtra(CropImage.ASPECT_Y, 1);
+    cropIntent.putExtra(CropImage.OUTPUT_X, 300);
+    cropIntent.putExtra(CropImage.OUTPUT_Y, 300);
+    cropIntent.putExtra(CropImage.RETURN_DATA, true);
+    if (this.cordova != null) {
       this.cordova.startActivityResult((CordovaPlugin) this, cropIntent, CROP_IMAGE);
     }
     return;
-	}
+  }
 
   @Override
   public void onActivityResult(int requestCode, int resultCode, Intent intent) {
