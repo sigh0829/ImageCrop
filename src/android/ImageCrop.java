@@ -1,11 +1,9 @@
 package com.bahamutwc.cordova.plugin.image;
 
 import java.io.ByteArrayOutputStream;
-import java.io.File;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
-import org.apache.cordova.CordovaResourceApi;
 import org.apache.cordova.PluginResult;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -13,7 +11,6 @@ import org.json.JSONException;
 import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Matrix;
 import android.content.Intent;
 import android.net.Uri;
 import android.util.Base64;
