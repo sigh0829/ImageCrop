@@ -23,7 +23,7 @@ final String CROP_IMAGE = "image:crop";
 final String FILE_CROP_FAILED_ERR = "Error: Image crop failed";
 final String FILE_CROP_ABORTED_ERR = "Error: Image crop aborted";
 
-public class Image extends CordovaPlugin {
+public class ImageCrop extends CordovaPlugin {
   public callbackContext;
 
   public boolean execute(String action, final String rawArgs, final CallbackContext callbackContext) throws JSONException {

@@ -3,7 +3,7 @@
 
 ### About
 
-This Cordova plugin is a simple wrapper around [Cropimage](https://github.com/biokys/cropimage), a library for handling cropping of image with the given deprecation of `com.android.camera.action.CROP`.
+This Cordova plugin is a simple wrapper around [Cropimage](https://github.com/biokys/cropimage), a library for handling image cropping with the given deprecation of `com.android.camera.action.CROP`.
 
 ### Usage
 
