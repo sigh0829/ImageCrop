@@ -32,10 +32,6 @@ THE SOFTWARE.
   <license>MIT</license>
   <keywords>cordova,image,crop</keywords>
 
-  <js-module src="www/ImageCrop.js" name="ImageCrop">
-    <clobbers target="window.ImageCrop" />
-  </js-module>
-
     <!-- android -->
 	<platform name="android">
     <config-file target="res/xml/config.xml" parent="/*">
@@ -47,5 +43,6 @@ THE SOFTWARE.
     <config-file target="AndroidManifest.xml" parent="/*">
       <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     </config-file>
+    <source-file src="src/android/ImageCrop.java" target-dir="src/com/bahamutwc/cordova/plugin/image" />
   </platform>
 </plugin>
