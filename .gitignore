@@ -2,3 +2,6 @@
 /.idea
 .DS_Store
 .sw*
+/app
+ImageCrop.iml
+build.gradle
