@@ -29,7 +29,7 @@ THE SOFTWARE.
     version="1.0.0">
   <name>Image Crop</name>
   <description>Cordova Image Crop Plugin</description>
-  <license>Apache 2.0</license>
+  <license>MIT</license>
   <keywords>cordova,image,crop</keywords>
 
   <js-module src="www/ImageCrop.js" name="ImageCrop">
