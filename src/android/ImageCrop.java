@@ -18,13 +18,11 @@ import android.util.Log;
 
 import eu.janmuller.android.simplecropimage;
 
-
-public final String CROP_IMAGE = "image:crop";
-public final String FILE_CROP_FAILED_ERR = "Error: Image crop failed";
-public final String FILE_CROP_ABORTED_ERR = "Error: Image crop aborted";
-
 public class ImageCrop extends CordovaPlugin {
-  public callbackContext;
+  public CallbackContext callbackContext;
+  public final String CROP_IMAGE = "image:crop";
+  public final String FILE_CROP_FAILED_ERR = "Error: Image crop failed";
+  public final String FILE_CROP_ABORTED_ERR = "Error: Image crop aborted";
 
   public boolean execute(String action, final String rawArgs, final CallbackContext callbackContext) throws JSONException {
     this.callbackContext = callbackContext;
