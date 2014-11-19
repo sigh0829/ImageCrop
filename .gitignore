@@ -3,5 +3,6 @@
 .DS_Store
 .sw*
 /app
+/libs
 ImageCrop.iml
 build.gradle
