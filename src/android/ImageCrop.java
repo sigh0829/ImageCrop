@@ -16,7 +16,7 @@ import android.net.Uri;
 import android.util.Base64;
 import android.util.Log;
 
-import eu.janmuller.android.simplecropimage;
+import eu.janmuller.android.simplecropimage.*;
 
 public class ImageCrop extends CordovaPlugin {
   public CallbackContext callbackContext;
