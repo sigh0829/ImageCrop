@@ -43,7 +43,7 @@ THE SOFTWARE.
     <config-file target="AndroidManifest.xml" parent="/*">
       <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     </config-file>
-    <dependency id="eu.janmuller.android.simplecropimage" url="https://github.com/wesleycho/cropimage.git" commit="8b1da42237e872d28b4407108fbb7e23a5992d18" />
+    <dependency id="eu.janmuller.android.simplecropimage" url="https://github.com/wesleycho/cropimage.git" commit="master" />
     <source-file src="src/android/ImageCrop.java" target-dir="src/com/bahamutwc/cordova/plugin/image" />
   </platform>
 </plugin>
