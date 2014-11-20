@@ -21,7 +21,7 @@ import eu.janmuller.android.simplecropimage.*;
 
 public class ImageCrop extends CordovaPlugin {
   public CallbackContext callbackContext;
-  public static final String CROP_IMAGE = "image:crop";
+  public static final int CROP_IMAGE = 0;
   public static final String FILE_CROP_FAILED_ERR = "Error: Image crop failed";
   public static final String FILE_CROP_ABORTED_ERR = "Error: Image crop aborted";
 
@@ -56,7 +56,7 @@ public class ImageCrop extends CordovaPlugin {
     cropIntent.putExtra(CropImage.OUTPUT_X, 300);
     cropIntent.putExtra(CropImage.OUTPUT_Y, 300);
     cropIntent.putExtra(CropImage.RETURN_DATA, true);
-    cordova.startActivityForResult((CordovaPlugin) this, cropIntent, CROP_IMAGE);
+    cordova.startActivityForResult((CordovaPlugin) this, cropIntent, 0);
     return;
   }
 
