@@ -56,7 +56,7 @@ public class ImageCrop extends CordovaPlugin {
     cropIntent.putExtra(CropImage.OUTPUT_X, 300);
     cropIntent.putExtra(CropImage.OUTPUT_Y, 300);
     cropIntent.putExtra(CropImage.RETURN_DATA, true);
-    context.startActivityResult((CordovaPlugin) this, cropIntent, CROP_IMAGE);
+    context.startActivity((CordovaPlugin) this, cropIntent, CROP_IMAGE);
     return;
   }
 
