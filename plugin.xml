@@ -43,7 +43,14 @@ THE SOFTWARE.
     <config-file target="AndroidManifest.xml" parent="/*">
       <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     </config-file>
-    <dependency id="eu.janmuller.android.simplecropimage" url="https://github.com/wesleycho/cropimage.git" commit="master" />
+    <source-file src="src/android/BitmapManager.java" target-dir="src/eu/janmuller/android/plugin/simpleimagecrop" />
+    <source-file src="src/android/CropImage.java" target-dir="src/eu/janmuller/android/plugin/simpleimagecrop" />
+    <source-file src="src/android/CropImageView.java" target-dir="src/eu/janmuller/android/plugin/simpleimagecrop" />
+    <source-file src="src/android/HighlightView.java" target-dir="src/eu/janmuller/android/plugin/simpleimagecrop" />
+    <source-file src="src/android/ImageViewTouchBase.java" target-dir="src/eu/janmuller/android/plugin/simpleimagecrop" />
+    <source-file src="src/android/MonitoredActivity.java" target-dir="src/eu/janmuller/android/plugin/simpleimagecrop" />
+    <source-file src="src/android/RotateBitmap.java" target-dir="src/eu/janmuller/android/plugin/simpleimagecrop" />
+    <source-file src="src/android/Util.java" target-dir="src/eu/janmuller/android/plugin/simpleimagecrop" />
     <source-file src="src/android/ImageCrop.java" target-dir="src/com/bahamutwc/cordova/plugin/image" />
   </platform>
 </plugin>
