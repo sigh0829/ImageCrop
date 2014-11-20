@@ -70,7 +70,7 @@ public class ImageCrop extends CordovaPlugin {
       String path = intent.getStringExtra(CropImage.IMAGE_PATH);
 
       if (path == null) {
-        callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.ERROR, FILE_CROP_ABORTED_ERR));
+        this.callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.ERROR, FILE_CROP_ABORTED_ERR));
         return;
       }
 
