@@ -1,4 +1,4 @@
-package com.bahamutwc.cordova.plugin.image;
+package com.jiff.cordova.plugin.image;
 
 import java.io.ByteArrayOutputStream;
 
@@ -20,9 +20,11 @@ import eu.janmuller.android.simplecropimage.*;
 
 public class ImageCrop extends CordovaPlugin {
   public CallbackContext callbackContext;
-  public final String CROP_IMAGE = "image:crop";
-  public final String FILE_CROP_FAILED_ERR = "Error: Image crop failed";
-  public final String FILE_CROP_ABORTED_ERR = "Error: Image crop aborted";
+  public static final String CROP_IMAGE = "image:crop";
+  public static final String FILE_CROP_FAILED_ERR = "Error: Image crop failed";
+  public static final String FILE_CROP_ABORTED_ERR = "Error: Image crop aborted";
+
+  private static final String LOG_TAG = "ImageCrop";
 
   public boolean execute(String action, final String rawArgs, final CallbackContext callbackContext) throws JSONException {
     this.callbackContext = callbackContext;
@@ -33,7 +35,7 @@ public class ImageCrop extends CordovaPlugin {
             JSONArray args = new JSONArray(rawArgs);
             String filePath = args.getString(0);
 
-            this.crop(filePath);
+            crop(filePath);
           } catch (Exception e) {
             Log.d(LOG_TAG, "Error: Crop - " + e.getMessage());
             callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.ERROR, e.getMessage()));
@@ -52,9 +54,7 @@ public class ImageCrop extends CordovaPlugin {
     cropIntent.putExtra(CropImage.OUTPUT_X, 300);
     cropIntent.putExtra(CropImage.OUTPUT_Y, 300);
     cropIntent.putExtra(CropImage.RETURN_DATA, true);
-    if (this.cordova != null) {
-      this.cordova.startActivityResult((CordovaPlugin) this, cropIntent, CROP_IMAGE);
-    }
+    cordova.startActivityResult((CordovaPlugin) this, cropIntent, CROP_IMAGE);
     return;
   }
 
