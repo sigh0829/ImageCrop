@@ -46,7 +46,7 @@ public class ImageCrop extends CordovaPlugin {
   }
 
   public void crop(String filePath){
-    Intent cropIntent = new Intent(this, CropImage.class);
+    Intent cropIntent = new Intent(this.callbackContext, CropImage.class);
     cropIntent.putExtra(CropImage.IMAGE_PATH, filePath);
     cropIntent.putExtra(CropImage.SCALE, true);
     cropIntent.putExtra(CropImage.ASPECT_X, 1);
