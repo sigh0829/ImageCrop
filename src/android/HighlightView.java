@@ -16,7 +16,7 @@
 
 package eu.janmuller.android.simplecropimage;
 
-
+import android.R;
 import android.graphics.*;
 import android.graphics.drawable.Drawable;
 import android.view.View;

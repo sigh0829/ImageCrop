@@ -63,7 +63,7 @@ public class ImageCrop extends CordovaPlugin {
   @Override
   public void onActivityResult(int requestCode, int resultCode, Intent intent) {
     if (requestCode == CROP_IMAGE) {
-      if (resultCode != RESULT_OK) {
+      if (resultCode != Activity.RESULT_OK) {
         this.callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.ERROR, FILE_CROP_FAILED_ERR));
         return;
       }
@@ -74,7 +74,7 @@ public class ImageCrop extends CordovaPlugin {
         return;
       }
 
-      Bitmap bitmap = BitmapFactory.decodeFile(path);
+      Bitmap bm = BitmapFactory.decodeFile(path);
       ByteArrayOutputStream baos = new ByteArrayOutputStream();
       bm.compress(Bitmap.CompressFormat.JPEG, 100, baos);
 
